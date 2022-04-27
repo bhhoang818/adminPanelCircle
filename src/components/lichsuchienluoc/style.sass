@@ -1,0 +1,221 @@
+.history-section
+    .setion-title
+        padding-left: 24px
+        margin-bottom: 32px
+    .wrap-left
+        max-width: 420px
+        width: 100%
+        height: 820px
+        background: #FFFFFF
+        border: 1px solid #D3D8DE
+        border-radius: 8px
+        margin-right: 12px
+        &_header
+            padding: 24px 16px
+            margin-bottom: 24px
+            background: #F8F9FA
+            border-radius: 8px 8px 0px 0px
+            h2
+                font-size: 20px
+                color: #454F5B
+        &_body
+            padding: 0 16px
+            height: 55%
+            overflow-y: auto
+            ul
+                display: flex
+                align-items: flex-start
+                flex-wrap: wrap
+                padding-right: 10px
+                li
+                    padding: 20px
+                    flex: 0 0 100%
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    background: #F6F7F8
+                    border-radius: 8px
+                    cursor: pointer
+                    transition: all .3s ease-in-out
+                    .title-item
+                        .title
+                            font-weight: 600
+                            font-size: 20px
+                            color: #454F5B
+                            transition: all .3s ease-in-out
+                    .action-item
+                        a
+                            margin-left: 15px
+                    &:hover
+                        background: #FFF0E5
+                        .title-item
+                            .title
+                                color: #D12421
+                                font-weight: 700
+                li + li
+                    margin-top: 16px
+    .wrap-right
+        max-width: 1318px
+        width: 100%
+        background: #FFFFFF
+        border: 1px solid #D3D8DE
+        border-radius: 8px
+        margin-left: 12px
+        &_header
+            margin-bottom: 24px
+            padding: 20px 24px
+            background: #F8F9FA
+            border-radius: 8px 8px 0px 0px
+            &--title
+                .icon
+                    width: 16px
+                h2
+                    font-weight: 700
+                    font-size: 20px
+                    color: #454F5B
+            &--sort
+                .tab-content
+                    .b-tab
+                        select
+                            width: 90px
+                            height: 36px
+                            background: #FFFFFF
+                            border: 0.5px solid #BDBDBD
+                            box-sizing: border-box
+                            border-radius: 4px
+                            color: #4F4F4F
+                            font-size: 14px
+                .tab-list
+                    border: 1px solid #D3D8DE
+                    box-sizing: border-box
+                    border-radius: 4px
+                    padding: 0 2px
+                    margin-left: 8px
+
+                    li
+                        display: flex
+                        align-items: center
+                        height: 34px
+                        .b-nav-tab
+                            display: inline-block
+                            padding: 4px 16px
+                            border-radius: 4px
+                            font-size: 1rem
+                            color: #454F5B
+                            font-weight: 600
+                            &.active
+                                background: #FFC20E
+        &_body
+            padding: 0 24px 24px
+            width: 100%
+            overflow-x: auto
+            &::-webkit-scrollbar-track
+                box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+                background-color: #f5f5f5
+                border-radius: 20px
+            &::-webkit-scrollbar
+                width: 3px
+                height: 8px
+            &::-webkit-scrollbar-thumb
+                border-radius: 3px
+                box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+                background-color: $yellow-brand
+            table
+                width: 100%
+                thead
+                    th
+                        position: relative
+                        padding: 16px 24px
+                        background: #fff
+                        border-top: 1px solid #D3D8DE
+                        border-bottom: 1px solid #D3D8DE
+                        p
+                            white-space: nowrap
+                            position: relative
+                            color: #464646
+                            font-weight: 700
+                            &::after
+                                position: absolute
+                                top: 0
+                                right: -16px
+                                content: ''
+                                width: .5px
+                                height: 24px
+                                background: #B6BEC8
+                        &::before
+                            position: absolute
+                            left: 0
+                            bottom: 0
+                            content: ''
+                            width: 100%
+                            height: 1px
+                            background: #D3D8DE
+                        &:last-child
+                            p
+                                &::after
+                                    display: none
+                        &:nth-child(1)
+                            position: -webkit-sticky
+                            position: sticky
+                            z-index: 2
+                            left: 0
+                tr
+                    td
+                        padding: 20px 24px
+                        background: #F8F9FA
+                        border-top: solid 8px #fff
+                        p
+                            white-space: nowrap
+                            color: #212B36
+                            display: flex
+                            align-items: center
+                            .icon
+                                margin-right: 10px
+                        &:nth-child(1)
+                            position: -webkit-sticky
+                            position: sticky
+                            z-index: 2
+                            left: 0
+    @media screen and ( max-width: 1280px )
+        .wrap-left
+            max-width: 100%
+            width: 280px
+        .wrap-right
+            max-width: 100%
+            width: 812px
+    @media screen and ( max-width: 1199.98px )
+        .wrapper-container
+            flex-wrap: wrap
+            .wrap-left,
+            .wrap-right
+                width: 100%
+                margin: 0
+            .wrap-left
+                margin-bottom: 24px
+                height: auto
+                &_header
+                    h2
+                        font-size: 18px
+                &_body
+                    height: auto
+                    padding-bottom: 16px
+                    ul
+                        li
+                            .title-item
+                                .title
+                                    font-size: 16px
+            .wrap-right
+                &_header
+                    &--title
+                        h2
+                            font-size: 18px
+    @media screen and ( max-width: 600px )
+        .setion-title
+            padding-left: 8px
+            margin-bottom: 16px
+            margin-top: 24px
+        .wrap-right
+            &_header
+                flex-wrap: wrap
+                &--title
+                    margin-bottom: 16px

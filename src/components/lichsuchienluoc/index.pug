@@ -1,0 +1,67 @@
+section.history-section  
+    h1.setion-title.d-flex.align-items-center 
+        img.icon(src="./images/icons/side-5.svg", alt="") 
+        |&nbsp; Lịch sử chiến lược
+    .wrapper-container.d-flex 
+        .wrap-left 
+            .wrap-left_header.d-flex
+                h2 Tên chiến lược
+            .wrap-left_body 
+                ul
+                    li
+                        .title-item 
+                            a.title(href="") Chiến lược Test
+                    li
+                        .title-item 
+                            a.title(href="") Chiến lược Test
+                    li
+                        .title-item 
+                            a.title(href="") Chiến lược Test
+        .wrap-right 
+            .wrap-right_header.d-flex.align-items-center.justify-content-between  
+                .wrap-right_header--title.d-flex.align-items-center
+                    img.icon(src="./images/icons/list.svg", alt="") 
+                    h2 &nbsp; Danh sách trúng giải
+                .wrap-right_header--sort.wrap-tabs.d-flex.align-items-center
+                    .tab-content 
+                        .b-tab#year.active
+                            select
+                                option(value='hide') Năm
+                                option(value='2022') 2022
+                                option(value='2021') 2021
+                        .b-tab#mounth
+                            select
+                                option(value='hide') Tháng
+                                option(value='january') Tháng 1
+                                option(value='february') Tháng 2 
+                    ul.tab-list.d-flex.align-items-center
+                        li 
+                            a.b-nav-tab(href='javascript:;' data-tab='mounth') Tháng
+                        li 
+                            a.b-nav-tab.active(href='javascript:;' data-tab='year') Năm
+
+            .wrap-right_body 
+                table
+                    thead 
+                        th
+                            p Tên Khách hàng
+                        th
+                            p Tên giải thưởng
+                        th 
+                            p Ngày tạo
+                        th 
+                            p Ngày sửa lần cuối
+                    -for(i=1; i<9; i++)
+                        tr
+                            td
+                                p Nguyễn Hoàng
+                            td
+                                p
+                                    img.icon(src="./images/icons/gift-2.svg", alt="")
+                                    |Giải 1
+                            td
+                                p 2022-03-29T03:10:52.9335229
+                                
+                            td
+                                p 2022-03-29T03:10:52.9335229
+                                

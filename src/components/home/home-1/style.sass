@@ -1,119 +1,93 @@
-.page-circle
-    &.opt-1
-        background-image: url('../images/bg-1.jpg')
-        background-size: cover
-        background-repeat: no-repeat
-        background-position: center
-        @media screen and ( max-width: 600.98px )
-            background-image: url('../images/bg-1_mb.jpg')
-    &.opt-2
-        background-image: url('../images/bg-2.jpg')
-        background-size: cover
-        background-repeat: no-repeat
-        background-position: center
-        .wrapper-container
-            .wrap-circle
-                .circle
-                    margin-bottom: 24px
-                    .block-arrow
-                        top: 23%
-                        left: 49.6%
-                        // animation: spin 4s linear infinite
-                        transform-origin: 50% 100%
-                    .setting
-                        text-align: center
-        @media screen and ( max-width: 1280px )
-            .wrapper-container
-                .wrap-circle
-                    .circle
-                        .block-arrow
-                            width: 50px
-                    .button
-                        .btn-submit
-                            padding: 8px 12px
-                            width: 350px
-                            height: 50px
-        @media screen and ( max-width: 1024px )
-            .wrapper-container
-                .wrap-circle
-                    .circle
-                        .block-arrow
-                            width: 75px
-        @media screen and ( max-width: 600.98px )
-            background-image: url('../images/bg-2_mb.jpg')
-            .wrapper-container
-                .wrap-circle
-                    .circle
-                        margin-bottom: 67px
-                        .block-arrow
-                            width: 40px
-                            left: 45%
-                        .setting
-                            display: none
-                    .button
-                        .btn-submit
-                            padding: 0
-                            width: 170px
-                            height: 55px
-
+.home-1
     .wrapper-container
-        width: 100%
-        height: 100%
-        .wrap-circle
-            .circle
-                position: relative
-                margin-bottom: 58px
-                .block-img
-                    width: 658px
-                    +img-ratio(658/658)
-                .block-arrow
-                    position: absolute
-                    top: -22px
-                    left: 50%
-                    transform: translateX(-50%)
-                    width: 80px
-                    &::after
-            .button
-                text-align: center
-        @media screen and ( max-width: 1440.98px )
-            .wrap-circle
-                .circle
-                    margin-bottom: 40px
-                    .block-img
-                        width: 450px
-        @media screen and ( max-width: 1024.98px )
-            .wrap-circle
-                .circle
-                    .block-img
-                        width: 650px
-        @media screen and ( max-width: 600.98px )
-            .wrap-circle
-                .circle
-                    padding: 0 30px
-                    margin-bottom: 24px
-                    .block-img
-                        width: 343px
-                .button
-                    .btn-submit
-                        span
-                            padding: 13px 25px
-
-#modal
-    position: absolute
-    max-width: 602px
-    top: 50%
-    left: 50%
-    display: none
-    z-index: 9999
-    padding: 104px 30px
-    background: rgba(255, 255, 255, 0.5)
-    backdrop-filter: blur(40px)
-    border-radius: 42px
-    transform: translate(-50%, -50%)
-    .modal-content
-        text-align: center
-        h1
-            font-weight: 700
-            font-size: 36px
-            color: #454F5B
-            text-transform: uppercase
+        .wrap-left
+            max-width: 1176px
+            width: 100%
+            padding: 24px
+            background: #FFFFFF
+            border: 1px solid #D3D8DE
+            border-radius: 8px
+            margin-right: 12px
+            &_header
+                padding-bottom: 24px
+                margin-bottom: 24px
+                border-bottom: 1px solid #D3D8DE
+                .setion-title
+                    display: flex
+                    align-items: center
+                .btn-add
+                    display: flex
+                    align-items: center
+                    padding: 4px 8px 4px 6px
+                    background: #FFC20E
+                    border-radius: 4px
+                    font-weight: 600
+                    color: #454F5B
+            &_body
+                ul
+                    display: flex
+                    align-items: center
+                    flex-wrap: wrap
+                    li
+                        padding: 20px
+                        flex: 0 0 100%
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        background: #F6F7F8
+                        border-radius: 8px
+                        cursor: pointer
+                        transition: all .3s ease-in-out
+                        .title-item
+                            .title
+                                font-weight: 600
+                                font-size: 20px
+                                color: #454F5B
+                                transition: all .3s ease-in-out
+                        .action-item
+                            a
+                                margin-left: 15px
+                        &:hover
+                            background: #FFF0E5
+                            .title-item
+                                .title
+                                    color: #D12421
+                                    font-weight: 700
+                    li + li
+                        margin-top: 16px
+        .wrap-right
+            max-width: 562px
+            width: 100%
+            padding: 16px
+            background: #FFFFFF
+            border: 1px solid #D3D8DE
+            border-radius: 8px
+            margin-left: 12px
+            &_header
+                margin-bottom: 16px
+                a
+                    +img-ratio(286/530)
+                    img
+                        border-radius: 8px
+            &_body
+                ul
+                    display: flex
+                    align-items: center
+                    flex-wrap: wrap
+                    margin-left: -8px
+                    margin-right: -8px
+                    li
+                        flex: 0 0 50%
+                        padding: 0 8px
+                        .title
+                            padding: 12px 0
+                            p
+                                font-weight: 600
+                                font-size: 16px
+                                color: #D4470F
+                        .content
+                            background: #F8F9FA
+                            border-radius: 5px
+                            padding: 10px 13px
+                            p
+                                color: #454F5B
