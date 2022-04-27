@@ -1,0 +1,83 @@
+@-webkit-keyframes shine
+    100%
+    left: 125%
+
+@keyframes shine
+    100%
+        left: 125%
+@keyframes flashing
+    0%
+        opacity: 0.35
+    100%
+        opacity: 1
+.animation
+    transition: all 1s cubic-bezier(.22, .44, 0, 1)
+    .animation_img
+        position: relative
+        overflow: hidden
+        cursor: pointer
+        a
+            img
+                transition: all 1s cubic-bezier(.22, .44, 0, 1)
+                transform: scale(1)
+        &::before
+            position: absolute
+            top: 0
+            left: -100%
+            z-index: 2
+            display: block
+            content: ''
+            width: 50%
+            height: 100%
+            background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%)
+            -webkit-transform: skewX(-25deg)
+            transform: skewX(-25deg)
+    @media screen and ( min-width: 1025px )
+        &:hover
+            .item-img, .img
+                box-shadow: 0 0 20px rgba(33,33,33,.2)
+                a
+                    img
+                        transform: scale(1.03)
+                &::before
+                    -webkit-animation: shine .75s
+                    animation: shine .75s
+
+@keyframes spin
+    from
+        transform: rotate(0deg)
+
+    to
+        transform: rotate(360deg)
+@keyframes color-change
+    0%
+        color: #464646
+    100%
+        color: #EB2629
+@keyframes loader
+    0%
+        transform: translate(-50%, -50%) rotate(0deg)
+
+    100%
+        transform: translate(-50%, -50%) rotate(360deg)
+
+.home-banner
+    .swiper-slide
+        // padding-top: 100vh
+        // height: 100vh
+        background: rgba(#1d1d1b, 0.85)
+        &:not(.swiper-slide-active)
+            .image
+                transform: scale(1.4) rotate(0)
+                // transform: scale(1.4) rotate(20deg)
+                transition: transform .6s cubic-bezier(.55,.085,.68,.53),opacity .6s cubic-bezier(.55,.085,.68,.53)
+                transition-delay: 0s,.9s
+                opacity: 0
+        &.swiper-slide-active
+            .image
+                transform: scale(1) rotate(0)
+                opacity: 1
+                transition-duration: 1.2s
+                transition-delay: .45s
+                transition-timing-function: cubic-bezier(.23,1,.32,1)

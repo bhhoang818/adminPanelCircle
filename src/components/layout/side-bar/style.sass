@@ -1,0 +1,94 @@
+#sidebar-nav
+    position: fixed
+    width: 110px
+    height: 100vh
+    top: 61px
+    left: 0
+    background: #F8F9FA
+    border-right: 1px solid #D3D8DE
+    z-index: 150
+    transition: all ease-in-out .2s
+    .open-sidebar
+        padding: 5px 13.5px
+        position: absolute
+        top: 0
+        left: 100%
+        background: $red-3
+        z-index: 1000
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        em
+            color: $white
+            transition: all ease-in-out .2s
+        @media screen and ( min-width: 601px )
+            display: none
+    .sidebar
+        position: relative
+        padding-top: 15px
+        height: 100%
+        .side-nav
+            overflow-y: auto
+            width: 100%
+            height: 100%
+            position: relative
+            z-index: 2
+            background: #F8F9FA
+            transition: all ease-in-out .3s
+
+            .side-item
+                position: relative
+                transition: all ease-in-out .3s
+                a
+                    position: relative
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    text-align: center
+                    padding: 8px 0
+                    transition: all ease-in-out .3s
+                    .icon
+                        width: 32px
+                        height: 32px
+                        transition: all ease-in-out .3s
+                    span
+                        color: #464646
+                        font-size: 12px
+                        padding: 8px 10px
+                    &::before
+                        position: absolute
+                        top: 50%
+                        left: 2px
+                        width: 2px
+                        height: 0
+                        opacity: 0
+                        visibility: hidden
+                        background: #D12421
+                        content: ''
+                        transform: translateY(-50%)
+                        transition: all ease-in-out .3s
+                &:hover,
+                &.active
+                    a
+                        background: $white
+                        .icon
+                            transform: scale(1.1)
+                        &::before
+                            height: 36px
+                            opacity: 1
+                            visibility: visible
+                &:nth-child(2)
+                    a
+                        .icon
+                            transform: translate3d(0, 0, 0) scale(1)
+                            animation: phone-icon 3000ms infinite
+    &.is-open
+        left: 0
+        .open-sidebar
+            em
+                transform: rotate(-180deg)
+    @media screen and ( max-width: 768.98px )
+        top: 51px
+    @media screen and ( max-width: 600.98px )
+        left: -110px

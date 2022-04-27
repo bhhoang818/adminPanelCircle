@@ -1,0 +1,153 @@
+.loginpage
+    header
+        display: none
+.login-section
+    width: 100%
+    height: 100vh
+    padding: 0
+    position: relative
+    .wrapper-container
+        width: 100%
+        height: 100%
+        padding: 0 30px
+        .wrap-login
+            .wrap-left
+                padding-right: 70px
+                figure
+                    figcaption
+                        .desc
+                            font-size: 32px
+                            line-height: 48px
+                            color: #454F5B
+            .wrap-right
+                padding-left: 70px
+                .wrap-form
+                    background: #FFFFFF
+                    border: 1px solid #D3D8DE
+                    box-sizing: border-box
+                    box-shadow: 0px 14px 40px rgba(33, 43, 54, 0.1)
+                    border-radius: 8px
+                    padding: 40px
+                    width: 510px
+                    .caption
+                        h1
+                            font-weight: 700
+                            font-size: 20px
+                            line-height: 28px
+                            color: #464646
+                            padding-bottom: 8px
+                            text-align: center
+                            span
+                                color: #BE1128
+                        p
+                            font-weight: 400
+                            font-size: 16px
+                            color: #454F5B
+                            text-align: center
+                            padding-bottom: 16px
+                    .form-group
+                        margin-bottom: 16px
+                        width: 100%
+                        position: relative
+                        .form-control
+                            width: 100%
+                            height: 36px
+                            padding-left: 16px
+                            padding-right: 40px
+                            overflow-x: hidden
+                            background: #FFFFFF
+                            border: 1px solid #D3D8DE
+                            box-sizing: border-box
+                            border-radius: 4px
+                        .label-remember
+                            position: relative
+                            color: #454F5B
+                            padding-left: 36px
+                            cursor: pointer
+                            &::before
+                                position: absolute
+                                top: 50%
+                                left: 0
+                                width: 18px
+                                height: 18px
+                                background: #FFFFFF
+                                border: 1px solid #D3D8DE
+                                box-sizing: border-box
+                                border-radius: 4px
+                                content: ''
+                                transform: translateY(-50%)
+                        input[type='checkbox']:checked ~ label::before
+                            background: #F7B512
+                            border: 1px solid #F7A30A
+                            content: '\e5ca'
+                            font-family: Material Icons
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            font-size: 14px
+                            font-weight: 900
+                            color: #454F5B
+                        #remember
+                            display: none
+                        .show-pass
+                            position: absolute
+                            top: 8px
+                            right: 16px
+                            cursor: pointer
+    .footer-section
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        background-image: url('../images/line.png')
+        background-repeat: no-repeat
+        background-position: bottom
+        .footer-content
+            display: flex
+            align-items: center
+            justify-content: flex-end
+    @media screen and ( max-width: 1280px )
+        .wrapper-container
+            .wrap-login
+                .wrap-left
+                    padding-right: 30px
+                .wrap-right
+                    padding-left: 30px
+    @media screen and ( max-width: 1199px )
+        .wrapper-container
+            .wrap-login
+                .wrap-left
+                    figure
+                        figcaption
+                            .desc
+                                font-size: 18px
+                                line-height: 30px
+    @media screen and ( max-width: 992px )
+        .wrapper-container
+            align-items: flex-start
+            .wrap-login
+                flex-direction: column
+                .wrap-left
+                    padding-right: 0
+                    margin-top: 60px
+                .wrap-right
+                    padding-left: 0
+                    margin-top: 30px
+    @media screen and ( max-width: 600px )
+        .wrapper-container
+            padding: 0 16px
+            .wrap-login
+                .wrap-left
+                    figure
+                        figcaption
+                            .desc
+                                font-size: 16px
+                .wrap-right
+                    .wrap-form
+                        padding: 16px
+                        width: 350px
+        .footer-section
+            position: static
+            .footer-content
+                .flower
+                    width: 135px

@@ -1,0 +1,58 @@
+#loading-container
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 99999
+    transition: 1s ease
+    background: rgba(0, 0, 0, 0.12)
+    backdrop-filter: blur(40px)
+    .loading-wrapper
+        position: absolute
+        padding-bottom: 75px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        max-width: 450px
+        padding: 0 20px
+        #loading-logo
+            text-align: center
+            width: 200px
+            height: 200px
+            margin: 0 auto
+            .loading-spinner-rolling
+                .ldio div
+                    position: absolute
+                    width: 120px
+                    height: 120px
+                    border: 20px solid #fff
+                    border-top-color: transparent
+                    border-radius: 50%
+
+                .ldio div
+                    animation: loader 1s linear infinite
+                    top: 100px
+                    left: 100px
+                .ldio
+                    width: 100%
+                    height: 100%
+                    position: relative
+                    transform: translateZ(0) scale(1)
+                    backface-visibility: hidden
+                    transform-origin: 0 0
+                    & div
+                        box-sizing: content-box
+
+        .progress-status
+            margin-top: 30px
+            text-align: center
+            font-size: r(40px)
+            font-weight: 700
+            color: $white
+            @media screen and ( max-width: 600px )
+                font-size: 16px
+    &.preload-finish
+        opacity: 0
+        pointer-events: none
