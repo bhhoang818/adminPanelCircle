@@ -12,17 +12,19 @@
                 padding-bottom: 24px
                 margin-bottom: 24px
                 border-bottom: 1px solid #D3D8DE
-                .setion-title
+                .section-title
                     display: flex
                     align-items: center
+                    padding-bottom: 0
                 .btn-add
                     display: flex
                     align-items: center
                     padding: 4px 8px 4px 6px
                     background: #FFC20E
                     border-radius: 4px
-                    font-weight: 600
-                    color: #454F5B
+                    span
+                        font-weight: 600
+                        color: #454F5B
             &_body
                 ul
                     display: flex
@@ -91,3 +93,41 @@
                             padding: 10px 13px
                             p
                                 color: #454F5B
+        @media screen and ( max-width: 1199.98px )
+            .wrap-left,
+            .wrap-right
+                max-width: 50%
+        @media screen and ( max-width: 992.98px )
+            flex-wrap: wrap
+            .wrap-left,
+            .wrap-right
+                max-width: 100%
+                margin: 0
+            .wrap-left
+                margin-bottom: 24px
+        @media screen and ( max-width: 600.98px )
+            .wrap-left
+                padding: 16px
+                &_header
+                    padding-bottom: 16px
+                    margin-bottom: 16px
+                    .btn-add
+                        padding: 8px
+                        span
+                            font-size: 12px
+                &_body
+                    ul
+                        li
+                            .title-item
+                                .title
+                                    font-size: 14px
+            .wrap-right
+                &_body
+                    ul
+                        li
+                            .title
+                                p
+                                    font-size: 14px
+                            .content
+                                p
+                                    font-size: 10px

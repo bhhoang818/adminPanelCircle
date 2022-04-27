@@ -9,6 +9,9 @@
         height: 48px
         border-radius: 4px
         padding: 12px 24px
+        display: flex
+        align-items: center
+        justify-content: center
         span
             position: relative
             font-weight: 600
@@ -40,3 +43,19 @@
                     color: #fff
                 &::before
                     width: 100%
+    &-backstep
+        position: relative
+        padding: 12px 16px 12px 12px
+        width: max-content
+        height: 48px
+        background: #D3D8DE
+        border-radius: 4px
+        display: flex
+        align-items: center
+        justify-content: center
+        span
+            font-weight: 600
+            color: #454F5B
+            margin-left: 12px
+        @media screen and ( min-width: 1025px )
+            &:hover

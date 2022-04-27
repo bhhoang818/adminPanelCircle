@@ -233,7 +233,32 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"]
+    position: relative
+    padding-left: 36px !important
     -webkit-appearance: listbox
+    cursor: pointer
+    &::-webkit-calendar-picker-indicator
+        color: transparent
+        background: none
+        z-index: 1
+        left: 0
+        width: 24px
+        height: 24px
+        position: absolute
+        cursor: pointer
+    &::before
+        color: transparent
+        background: none
+        display: block
+        content: url('../images/icons/calendar.svg')
+        position: absolute
+        width: 24px
+        height: 24px
+        top: 5px
+        right: 0
+        left: 8px
+        bottom: 0
+        cursor: pointer
 
 textarea
     overflow: auto

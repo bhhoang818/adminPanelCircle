@@ -1,0 +1,75 @@
+.step-section
+    padding: 45px 0
+    .progress-wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        max-width: 1406px
+        width: 100%
+        margin: 0 auto
+        .step
+            cursor: pointer
+            width: 25%
+            display: block
+            height: 4px
+            background: #ABABAB
+            color: #ABABAB
+            position: relative
+            .icon
+                display: flex
+                align-items: center
+                justify-content: center
+                content: ""
+                width: 60px
+                height: 60px
+                margin: auto
+                color: #fff
+                background: url('')
+                background-position: center
+                background-repeat: no-repeat
+                font-weight: 700
+                font-size: 8px
+                border-radius: 50%
+                position: absolute
+                top: 0
+                bottom: 0
+                right: 0
+                left: 0
+                &.created,
+                &.finished
+                    display: none
+            .content
+                position: absolute
+                top: 40px
+                left: 50%
+                transform: translateX(-50%)
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-direction: column
+                p
+                    white-space: nowrap
+            &.active
+                background: #FFC20E
+                color: #464646
+                & > .disable
+                    display: none
+            &.active > .created
+                display: block
+    @media screen and ( max-width: 600.98px )
+        .wrapper-container
+            margin-top: 20px
+            .progress-wrap
+                .step
+                    .icon
+                        width: 50px
+                        height: 50px
+                    .content
+                        width: 100%
+                        p
+                            text-align: center
+                            font-size: 14px
+                            &:last-child
+                                padding: 0 8px
+                                font-size: 10px
+                                white-space: normal

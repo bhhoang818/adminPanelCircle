@@ -1,0 +1,47 @@
+include ../stepbystep/index.pug
+section.create-strategy
+    .wrapper-container
+        .row.no-gutters 
+            .wrap-left 
+                h1.section-title Hãy thiếp lập chiến lược 
+                    br 
+                    |vòng quay may mắn
+                p.desc Thiết lập các thông số qua các bước thực hiện trên màn 
+                    |hình phù hợp với chiến lược vòng quay may mắn mà 
+                    |bạn mong muốn
+                figure 
+                    img(src="./images/image_chienluoc.png", alt="")
+            .wrap-right 
+                h2 Tạo chiến lược
+                form.wrap-form(action="") 
+                    .row 
+                        .form-group.col-lg-6 
+                            label(for="") Tên chiến lược
+                            input.form-control(type="text") 
+                        .form-group.col-lg-6  
+                            label(for="") Loại chiến lược
+                            select.form-control(name='')
+                                option(value="") Lựa chọn loại chiến lược
+                                option(value="") Ngoài hệ thống
+                                option(value="") Trong hệ thống
+                        .form-group.col-lg-12  
+                            label(for="") Cấu hình đường dẫn
+                            input.form-control(type="text" placeholder = 'url') 
+                        .form-group.col-lg-6  
+                            label(for="") Ngày bắt đầu
+                            input.form-control(type="datetime-local", name="") 
+                        .form-group.col-lg-6  
+                            label(for="") Ngày kết thúc
+                            input.form-control(type="datetime-local", name="")
+                        .form-group.col-lg-6  
+                            input#check(type="checkbox", name="")
+                            label.check-label(for="check") Tỉ lệ quay trúng chia đều
+                        .form-group.col-lg-12 
+                            button.btn.btn-backstep(type='submit') 
+                                img(src="./images/icons/back.svg", alt="")
+                                span Quay lại
+                            button.btn.btn-submit(type='submit') 
+                                span Tiếp tục tạo chiến lược
+                                em.material-icons arrow_forward
+
+
