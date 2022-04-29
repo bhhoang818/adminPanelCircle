@@ -1,0 +1,198 @@
+section.step-section 
+    .wrapper-container
+        ul.progress-wrap
+            li.step.active
+                a.step_child(href="tao-chien-luoc.html")
+                    .icon.created
+                            img(src="./images/icons/c-1.svg", alt="") 
+                    .icon.disable
+                            img(src="./images/icons/d-1.svg", alt="")
+                    .icon.finished
+                            img(src="./images/icons/f-1.svg", alt="")
+                    .content
+                        p
+                            b Bước 1
+                        p Tạo chiến lược 
+            li.step.active
+                a.step_child(href="chon-nhom-khach-hang.html")
+                    .icon.created
+                            img(src="./images/icons/c-2.svg", alt="") 
+                    .icon.disable
+                            img(src="./images/icons/d-2.svg", alt="")
+                    .icon.finished
+                            img(src="./images/icons/f-2.svg", alt="")
+                    .content
+                        p
+                            b Bước 2
+                        p Chọn nhóm Khách hàng
+            li.step.active 
+                a.step_child(href="thiet-lap-nhom-giai-thuong.html")
+                    .icon.created
+                            img(src="./images/icons/c-3.svg", alt="") 
+                    .icon.disable
+                            img(src="./images/icons/d-3.svg", alt="")
+                    .icon.finished
+                            img(src="./images/icons/f-3.svg", alt="")
+                    .content
+                        p
+                            b Bước 3
+                        p Chọn nhóm Giải thưởng
+            li.step.active 
+                a.step_child(href="chon-giao-dien.html")
+                    .icon.created
+                            img(src="./images/icons/c-4.svg", alt="") 
+                    .icon.disable
+                            img(src="./images/icons/d-4.svg", alt="")
+                    .icon.finished
+                            img(src="./images/icons/f-4.svg", alt="")
+                    .content
+                        p
+                            b Bước 4
+                        p Chọn giao diện vòng quay
+section.choice-layout 
+    .wrapper-container.d-flex
+        .wrap-left.wrap-tabs
+            ul.tab-list.d-flex.align-items-center
+                li 
+                    a.b-nav-tab.active(href='javascript:;' data-tab='tab-1') Giao diện vòng quay
+                li 
+                    a.b-nav-tab(href='javascript:;' data-tab='tab-2') Giao diện hình nền 
+            .tab-content
+                #tab-1.b-tab.active
+                    .tab-container
+                        .swiper.mySwiper.layout-circle
+                            .swiper-header.d-flex.align-items-center
+                                h1 Chọn hình ảnh vòng quay
+                                button.btn.btn-default(type='submit') 
+                                    img(src="./images/icons/cloud-upload-2.svg", alt="")
+                                    span Tải lên
+                                .swiper__arrows
+                                    .swiper-button-prev
+                                    .swiper-button-next
+                            .swiper-wrapper
+                                .swiper-slide 
+                                    .slide-inner 
+                                            a(href="") 
+                                                img(src="./images/gd-1.png", alt="")
+                                .swiper-slide
+                                    .slide-inner 
+                                            a(href="") 
+                                                img(src="./images/gd-2.png", alt="")
+                                .swiper-slide 
+                                    .slide-inner 
+                                            a(href="") 
+                                                img(src="./images/gd-1.png", alt="")
+                                .swiper-slide
+                                    .slide-inner 
+                                            a(href="") 
+                                                img(src="./images/gd-2.png", alt="")
+                                .swiper-slide 
+                                    .slide-inner 
+                                            a(href="") 
+                                                img(src="./images/gd-1.png", alt="")
+                        form.wrap-form(action="" method="method")
+                            .form-row.row
+                                p.title Kích thước vòng quay
+                                .form-group.col-lg-3
+                                    label(for="") Độ rộng
+                                    input.form-control(type="text" placeholder='0')
+                                .form-group.col-lg-3
+                                    label(for="") độ cao
+                                    input.form-control(type="text" placeholder='0')
+                            .form-row.row
+                                p.title Thông số vòng quay
+                                .form-group.col-lg-3
+                                    label(for="") Canh lề trên
+                                    input.form-control(type="text" placeholder='0')
+                                .form-group.col-lg-3
+                                    label(for="") canh lề dưới
+                                    input.form-control(type="text" placeholder='0')
+                                .form-group.col-lg-3
+                                    label(for="") canh lề phải
+                                    input.form-control(type="text" placeholder='0')
+                                .form-group.col-lg-3
+                                    label(for="") canh lề trái
+                                    input.form-control(type="text" placeholder='0')
+                                .form-group.col-lg-3
+                                    label(for="") Bán kính vòng quay
+                                    input.form-control(type="text" placeholder='0')
+                                .form-group.col-lg-3
+                                    label(for="") Bán kính tâm vòng quay 
+                                    input.form-control(type="text" placeholder='0')
+                            .form-row.row
+                                p.title Thông số kim quay 
+                                .form-group.col-lg-12
+                                    label(for="") Địa chỉ kim
+                                    input.form-control(type="file" placeholder='0')
+                                .form-group.col-lg-3
+                                    label(for="") Sử dụng ảnh kim vòng quay
+                                    .custom-select
+                                        select.form-control(name='')
+                                            option(value="0" disable selected hidden) True
+                                            option(value="1") True
+                                            option(value="2") False
+                                .form-group.col-lg-3
+                                    label(for="") Độ lệch kim
+                                    input.form-control(type="text" placeholder='0')
+                                .form-group.col-lg-3
+                                    label(for="") Tọa độ y kim vòng quay
+                                    input.form-control(type="text" placeholder='0')
+                                .form-group.col-lg-3
+                                    label(for="") Tọa độ x kim vòng quay
+                                    input.form-control(type="text" placeholder='0')
+                            .form-row.row
+                                p.title Thông số kiểu chữ vòng quay
+                                .form-group.col-lg-3
+                                    label(for="") Font family
+                                    input.form-control(type="type" placeholder='Arial')
+                                .form-group.col-lg-3
+                                    label(for="") kích thước font
+                                    input.form-control(type="type" placeholder='36')
+                                .form-group.col-lg-3
+                                    label(for="") canh lề chữ 
+                                    .custom-select
+                                        select.form-control(name='')
+                                            option(value="0" disable selected hidden) Center
+                                            option(value="1") Left
+                                            option(value="2") Right 
+                                .form-group.col-lg-3
+                                    label(for="") HƯỚNG CHỮ
+                                    .custom-select
+                                        select.form-control(name='')
+                                            option(value="0" disable selected hidden) Horizontal
+                                            option(value="1") Horizontal
+                                            option(value="2") vertical 
+                            .form-row.row
+                                p.title Âm thanh
+                                .form-group.col-lg-6
+                                    label(for="") âm thanh khi bắt đầu quay
+                                    input.form-control(type="type" placeholder='Arial')
+                                    img.icon(src="./images/icons/bxs-volume-full.svg", alt="")
+                                .form-group.col-lg-6
+                                    label(for="") ÂM THANH KHI KẾT THÚC
+                                    input.form-control(type="type" placeholder='36')
+                                    img.icon(src="./images/icons/bxs-volume-full.svg", alt="")
+                #tab-2.b-tab
+                    select
+                        option(value='hide') Tháng
+                        option(value='january') Tháng 1
+                        option(value='february') Tháng 2 
+        .wrap-right
+            .wrap-right_img 
+                figure 
+                    img(src="./images/gd-1.png", alt="")
+            .wrap-right_content 
+                ul 
+                    li 
+                        h2 Tên giao diện
+                        p Giao diện default
+                    li 
+                        h2 Mô tả
+                        p Tặng lượt quay
+            .wrap-right_button 
+                button.btn.btn-backstep(type='submit') 
+                    img(src="./images/icons/back.svg", alt="")
+                    span Quay lại
+                button.btn.btn-submit(type='submit') 
+                    span Hoàn thành
+                    em.material-icons check

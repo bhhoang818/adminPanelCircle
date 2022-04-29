@@ -1,0 +1,81 @@
+.fancybox__container
+    .fancybox__backdrop
+        background: rgba(0, 0, 0, .4)
+#dialog-content
+    width: 567px
+    padding: 24px
+    background: #FFFFFF
+    h1
+        font-weight: 600
+        font-size: 32px
+        color: #464646
+        margin-bottom: 26px
+    .wrap-form
+        .form-group
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            margin-bottom: 16px
+            input[type='radio']
+                display: none
+            input[type='radio']:checked + label::before
+                content: '\e837'
+                font-family: Material Icons
+                color: #F7B512
+                font-size: 20px
+            label
+                display: block
+                position: relative
+                cursor: pointer
+                padding-left: 32px
+                color: #454F5B
+                &::before
+                    content: ""
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    position: absolute
+                    width: 20px
+                    height: 20px
+                    background: #FFFFFF
+                    border: 1px solid #D3D8DE
+                    box-sizing: border-box
+                    border-radius: 50%
+                    left: 0
+                    top: 50%
+                    transform: translateY(-50%)
+            .form-control
+                width: 100%
+                height: 36px
+                margin-top: 8px
+                margin-left: 32px
+                padding: 0 16px
+                background: #FFFFFF
+                border: 1px solid #D3D8DE
+                box-sizing: border-box
+                border-radius: 4px
+                &:focus
+                    outline: 0
+            .btn-close,
+            .btn-update
+                padding: 12px 24px
+                border-radius: 4px
+                span
+                    font-weight: 600
+                    color: #454F5B
+                &:focus
+                    outline: 0
+            .btn-close
+                background: #D3D8DE
+                margin-left: auto
+            .btn-update
+                margin-left: 16px
+                background: #FFC20E
+            &:last-child
+                padding-top: 24px
+                border-top: 1px solid #D3D8DE
+    .carousel__button
+        position: absolute
+        top: 20px
+        right: 32px
+        color: #454F5B

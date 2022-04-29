@@ -1,0 +1,15 @@
+#dialog-content(style='display:none;')
+    h1 Cấu hình chung
+    form.wrap-form(action="") 
+        .form-group 
+            input#turns(type="radio", name="checkbox")
+            label(for="turns") Số lượt quay
+            input.form-control(type="text")
+        .form-group
+            input#disable(type="radio", name="checkbox")
+            label(for="disable") Vô hiệu hóa tất cả
+        .form-group
+            button.btn.btn-close(type='submit' data-fancybox-close) 
+                span Đóng
+            button.btn.btn-update(type='submit') 
+                span Cập nhật

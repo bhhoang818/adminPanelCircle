@@ -1,0 +1,174 @@
+section.step-section 
+    .wrapper-container
+        ul.progress-wrap
+            li.step.active
+                a.step_child(href="tao-chien-luoc.html")
+                    .icon.created
+                            img(src="./images/icons/c-1.svg", alt="") 
+                    .icon.disable
+                            img(src="./images/icons/d-1.svg", alt="")
+                    .icon.finished
+                            img(src="./images/icons/f-1.svg", alt="")
+                    .content
+                        p
+                            b Bước 1
+                        p Tạo chiến lược 
+            li.step.active
+                a.step_child(href="chon-nhom-khach-hang.html")
+                    .icon.created
+                            img(src="./images/icons/c-2.svg", alt="") 
+                    .icon.disable
+                            img(src="./images/icons/d-2.svg", alt="")
+                    .icon.finished
+                            img(src="./images/icons/f-2.svg", alt="")
+                    .content
+                        p
+                            b Bước 2
+                        p Chọn nhóm Khách hàng
+            li.step.active 
+                a.step_child(href="thiet-lap-nhom-giai-thuong.html")
+                    .icon.created
+                            img(src="./images/icons/c-3.svg", alt="") 
+                    .icon.disable
+                            img(src="./images/icons/d-3.svg", alt="")
+                    .icon.finished
+                            img(src="./images/icons/f-3.svg", alt="")
+                    .content
+                        p
+                            b Bước 3
+                        p Chọn nhóm Giải thưởng
+            li.step 
+                a.step_child(href="chon-giao-dien.html")
+                    .icon.created
+                            img(src="./images/icons/c-4.svg", alt="") 
+                    .icon.disable
+                            img(src="./images/icons/d-4.svg", alt="")
+                    .icon.finished
+                            img(src="./images/icons/f-4.svg", alt="")
+                    .content
+                        p
+                            b Bước 4
+                        p Chọn giao diện vòng quay
+section.choice-customer
+    .wrapper-container
+        .wrap-sort.d-flex.align-items-center 
+            h1.title-small Nhóm Khách hàng
+            .custom-select
+                select.form-control(name='')
+                    option(value="0" disable selected hidden) Chọn nhóm khách hàng 
+                    option(value="1") Nhóm KH 1
+                    option(value="2") Nhóm KH 2
+                    option(value="3") Nhóm KH 3
+                    option(value="4") Nhóm KH 4
+            a.edit.ms-3(href="") 
+                img(src="./images/icons/pencle.svg", alt="")
+            a.save.ms-3(href="") 
+                img(src="./images/icons/save.svg", alt="" style='display:none;')
+            //- #input-add
+            //-     input(type="text" placeholder='Nhập tên nhóm KH')
+            //-     a(href="")
+            //-         em.material-icons add 
+            //-         span Thêm
+        .wrap-body
+            .wrap-body_header.d-flex.align-items-center.justify-content-between 
+                h1.title-small Danh sách Khách hàng
+                .wrap-button.d-flex.align-items-center 
+                    button.btn.btn-search 
+                        img(src="./images/icons/search.svg", alt="")
+                    button.btn.btn-add
+                        img(src="./images/icons/add.svg", alt="")
+                        span &nbsp;Thêm mới
+                    button.btn.btn-upload(type='submit') 
+                        img(src="./images/icons/cloud-upload.svg", alt="")
+                        span &nbsp;Tải lên
+                    button.btn.btn-setting(type='submit' data-fancybox='' data-src='#dialog-content') 
+                        img(src="./images/icons/setting.svg", alt="")
+                        span &nbsp;Cấu hình chung
+            .wrap-body_table 
+                table
+                    tr
+                        th
+                            .sort
+                                p Tên Khách hàng
+                                img(src="./images/icons/sort.svg", alt="")
+                        th
+                            p Mã Khách hàng
+                        th
+                            p Số lượt quay
+                        th
+                            p Vô hiệu hóa
+                    tr
+                        td
+                            p Nguyễn Ngọc Yến Nhi
+                        td
+                            p 123456
+                        td
+                            p 2
+                        td
+                            .custom-select
+                                select.form-control(name='')
+                                    option(value="0" disable hidden selected) True
+                                    option(value="1") True
+                                    option(value="2") False
+                    tr
+                        td
+                            p Nguyễn Ngọc Yến Nhi
+                        td
+                            p 123456
+                        td
+                            p 2
+                        td
+                            .custom-select
+                                select.form-control(name='')
+                                    option(value="0" disable hidden selected) True
+                                    option(value="1") True
+                                    option(value="2") False
+                    tr
+                        td
+                            p Nguyễn Ngọc Yến Nhi
+                        td
+                            p 123456
+                        td
+                            p 2
+                        td
+                            .custom-select
+                                select.form-control(name='')
+                                    option(value="0" disable hidden selected) True
+                                    option(value="1") True
+                                    option(value="2") False
+                    tr
+                        td
+                            p Nguyễn Ngọc Yến Nhi
+                        td
+                            p 123456
+                        td
+                            p 2
+                        td
+                            .custom-select
+                                select.form-control(name='')
+                                    option(value="0" disable hidden selected) True
+                                    option(value="1") True
+                                    option(value="2") False
+                nav.pagination-nav.d-flex.align-items-center
+                    ul.pagination.d-flex.align-items-center.ms-auto  
+                        li.page-item
+                            a.page-link(href='#')
+                                em.material-icons navigate_before
+                        li.page-item.active
+                            a.page-link(href='#') 1
+                        li.page-item
+                            a.page-link(href='#') 2
+                        li.page-item
+                            a.page-link(href='#') 3
+                        li.page-item
+                            a.page-link(href='#')
+                                em.material-icons navigate_next
+                .wrap-button.d-flex.align-items-center 
+                    button.btn.btn-backstep(type='submit') 
+                        img(src="./images/icons/back.svg", alt="")
+                        span Quay lại
+                    button.btn.btn-submit(type='submit') 
+                        span Tiếp tục tạo chiến lược
+                        em.material-icons arrow_forward
+
+

@@ -2,6 +2,11 @@
     display: inline-block
     border: 0
     background: transparent
+    &-search
+        width: 32px
+        height: 32px
+        background: #EAEEF2
+        border-radius: 4px
     &-submit
         position: relative
         background: #FFC20E
@@ -59,3 +64,19 @@
             margin-left: 12px
         @media screen and ( min-width: 1025px )
             &:hover
+    &-add,
+    &-upload,
+    &-setting
+        display: flex
+        align-items: center
+        padding: 4px 8px 4px 6px
+        border-radius: 4px
+        span
+            font-weight: 600
+            color: #454F5B
+    &-upload
+        background: #C2E1FF
+    &-add
+        background: #FFC20E
+    &-setting
+        background: #EAEEF2

@@ -20,11 +20,21 @@ section.create-strategy
                             input.form-control(type="text") 
                         .form-group.col-lg-6  
                             label(for="") Loại chiến lược
-                            select.form-control(name='')
-                                option(value="") Lựa chọn loại chiến lược
-                                option(value="") Ngoài hệ thống
-                                option(value="") Trong hệ thống
-                        .form-group.col-lg-12  
+                            .custom-select
+                                select(name='')
+                                    option(value="0" disable selected hidden) Lựa chọn loại chiến lược
+                                    option(value="1") Ngoài hệ thống
+                                    option(value="2") Trong hệ thống
+                                    option(value="3") Tự do
+                        .form-group.col-lg-6
+                            label(for="") Cấu hình lượt quay
+                            .custom-select
+                                select.form-control(name='')
+                                    option(value="0" disable selected hidden) Chọn cấu hình lượt quay
+                                    option(value="1") 1 lần / người
+                                    option(value="2") Theo thiết lập
+                                    option(value="3") Tự do
+                        .form-group.col-lg-6
                             label(for="") Cấu hình đường dẫn
                             input.form-control(type="text" placeholder = 'url') 
                         .form-group.col-lg-6  
