@@ -1,0 +1,30 @@
+#popup-bg.popup-detail 
+    .popup-main
+        .popup-header 
+            h1 Tải giao diện vòng quay
+        .popup-body
+            ul.d-flex.align-items-center.justify-content-center 
+                li 
+                    a(href="")
+                        figure 
+                            img(src="./images/icons/photo-upload.svg", alt="") 
+                        figcaption 
+                            p Tải hình 
+                                span Desktop
+                li 
+                    a(href="")
+                        figure 
+                            img(src="./images/icons/photo-upload.svg", alt="") 
+                        figcaption 
+                            p Tải hình 
+                                span Mobile
+            form.wrap-form(action="")
+                .form-group 
+                    label(for="") Tên giao diện vòng quay
+                    input.form-control(type="text" placeholder='Nhập tên giao diện')
+                .form-group 
+                    label(for="") Mô tả
+                    input.form-control(type="text" placeholder='Nhập mô tả vòng quay')
+                .form-group 
+                    button.btn.btn-submit 
+                        span Cập nhật

@@ -153,6 +153,27 @@ const initSwiper = () => {
                 slidesPerView: 5,
             },
         },
+    });
+    var swiper = new Swiper(".layout-bg", {
+        slidesPerView: 5,
+        spaceBetween: 16,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: ".layout-bg .swiper-header .swiper__arrows .swiper-button-next",
+            prevEl: ".layout-bg .swiper-header .swiper__arrows .swiper-button-prev",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+            1281: {
+                slidesPerView: 5,
+            },
+        },
 
     });
 }

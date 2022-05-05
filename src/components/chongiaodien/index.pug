@@ -63,7 +63,7 @@ section.choice-layout
                         .swiper.mySwiper.layout-circle
                             .swiper-header.d-flex.align-items-center
                                 h1 Chọn hình ảnh vòng quay
-                                button.btn.btn-default(type='submit') 
+                                button.btn.btn-default(type='submit' data-fancybox='' data-src='#popup-bg') 
                                     img(src="./images/icons/cloud-upload-2.svg", alt="")
                                     span Tải lên
                                 .swiper__arrows
@@ -105,13 +105,13 @@ section.choice-layout
                                     label(for="") Canh lề trên
                                     input.form-control(type="text" placeholder='0')
                                 .form-group.col-lg-3
-                                    label(for="") canh lề dưới
+                                    label(for="") Canh lề dưới
                                     input.form-control(type="text" placeholder='0')
                                 .form-group.col-lg-3
-                                    label(for="") canh lề phải
+                                    label(for="") Canh lề phải
                                     input.form-control(type="text" placeholder='0')
                                 .form-group.col-lg-3
-                                    label(for="") canh lề trái
+                                    label(for="") Canh lề trái
                                     input.form-control(type="text" placeholder='0')
                                 .form-group.col-lg-3
                                     label(for="") Bán kính vòng quay
@@ -122,8 +122,10 @@ section.choice-layout
                             .form-row.row
                                 p.title Thông số kim quay 
                                 .form-group.col-lg-12
-                                    label(for="") Địa chỉ kim
-                                    input.form-control(type="file" placeholder='0')
+                                    label.custom-file-label(for="") 
+                                        span Url
+                                        img(src="./images/icons/cloud-upload.svg", alt="")
+                                    input.custom-file-input#customFile(type="file", name="") 
                                 .form-group.col-lg-3
                                     label(for="") Sử dụng ảnh kim vòng quay
                                     .custom-select
@@ -146,17 +148,17 @@ section.choice-layout
                                     label(for="") Font family
                                     input.form-control(type="type" placeholder='Arial')
                                 .form-group.col-lg-3
-                                    label(for="") kích thước font
+                                    label(for="") Kích thước font
                                     input.form-control(type="type" placeholder='36')
                                 .form-group.col-lg-3
-                                    label(for="") canh lề chữ 
+                                    label(for="") Canh lề chữ 
                                     .custom-select
                                         select.form-control(name='')
                                             option(value="0" disable selected hidden) Center
                                             option(value="1") Left
                                             option(value="2") Right 
                                 .form-group.col-lg-3
-                                    label(for="") HƯỚNG CHỮ
+                                    label(for="") Hướng chữ
                                     .custom-select
                                         select.form-control(name='')
                                             option(value="0" disable selected hidden) Horizontal
@@ -165,30 +167,62 @@ section.choice-layout
                             .form-row.row
                                 p.title Âm thanh
                                 .form-group.col-lg-6
-                                    label(for="") âm thanh khi bắt đầu quay
-                                    input.form-control(type="type" placeholder='Arial')
+                                    label(for="") Âm thanh khi bắt đầu quay
+                                    input.form-control(type="type" placeholder='mp3')
                                     img.icon(src="./images/icons/bxs-volume-full.svg", alt="")
                                 .form-group.col-lg-6
-                                    label(for="") ÂM THANH KHI KẾT THÚC
-                                    input.form-control(type="type" placeholder='36')
+                                    label(for="") Âm thanh khi kết thúc
+                                    input.form-control(type="type" placeholder='mp3')
                                     img.icon(src="./images/icons/bxs-volume-full.svg", alt="")
                 #tab-2.b-tab
-                    select
-                        option(value='hide') Tháng
-                        option(value='january') Tháng 1
-                        option(value='february') Tháng 2 
+                    .tab-container
+                        .swiper.mySwiper.layout-bg
+                            .swiper-header.d-flex.align-items-center
+                                h1 Chọn hình ảnh vòng quay
+                                button.btn.btn-default(type='submit') 
+                                    img(src="./images/icons/cloud-upload-2.svg", alt="")
+                                    span Tải lên
+                                .swiper__arrows
+                                    .swiper-button-prev
+                                    .swiper-button-next
+                            .swiper-wrapper
+                                .swiper-slide 
+                                    .slide-inner 
+                                            a(href="javascript:;" data-fancybox-trigger="gallery") 
+                                                img(src="./images/bg-review-1.jpg", alt="")
+                                .swiper-slide
+                                    .slide-inner 
+                                            a(href="") 
+                                                img(src="./images/bg-review-2.jpg", alt="")
+                                .swiper-slide 
+                                    .slide-inner 
+                                            a(href="") 
+                                                img(src="./images/bg-review-3.jpg", alt="")
+                                .swiper-slide
+                                    .slide-inner 
+                                            a(href="") 
+                                                img(src="./images/bg-review-4.jpg", alt="")
+                                .swiper-slide 
+                                    .slide-inner 
+                                            a(href="") 
+                                                img(src="./images/bg-review-5.jpg", alt="")
+                    div(style='display: none;')
+                        a(href="./images/bg-review-1.jpg" data-fancybox="gallery" data-thumb='./images/bg-review-1.jpg')
+                        a(href="./images/bg-review-2.jpg" data-fancybox='gallery' data-thumb='./images/bg-review-2.jpg')
+                        a(href="./images/bg-review-3.jpg" data-fancybox='gallery' data-thumb='./images/bg-review-3.jpg')
+
         .wrap-right
             .wrap-right_img 
                 figure 
                     img(src="./images/gd-1.png", alt="")
-            .wrap-right_content 
-                ul 
-                    li 
-                        h2 Tên giao diện
-                        p Giao diện default
-                    li 
-                        h2 Mô tả
-                        p Tặng lượt quay
+                figcaption 
+                    ul 
+                        li 
+                            h2 Tên giao diện
+                            p Giao diện default
+                        li 
+                            h2 Mô tả
+                            p Tặng lượt quay
             .wrap-right_button 
                 button.btn.btn-backstep(type='submit') 
                     img(src="./images/icons/back.svg", alt="")
