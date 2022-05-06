@@ -1,30 +1,25 @@
-section.login-section
-    .wrapper-container.d-flex.align-items-center.justify-content-center
-        .wrap-login.d-flex.align-items-center.justify-content-center 
-            .wrap-left
-                figure 
-                    img(src="./images/login-bg.png", alt="") 
-                    figcaption 
-                        p.desc Amet minim mollit non deserunt ullamco 
-                            br
-                            |est sit aliqua dolor do amet sint.
-            .wrap-right 
+section.login-bg 
+    .wrapper-container.d-flex.align-items-center 
+        .wrapper-left
+            .logo 
+                a(href="")
+                    img(src="./images/logo.png", alt="")
+            .img-bg
+                img(src="./images/login-bg.png", alt="")
+        .wrapper-right 
+            .wrapper-content 
+                .wrap-header.d-flex
+                    .title-login 
+                        p Chào mừng bạn đến với 
+                        h1 Admin panel
                 form.wrap-form(action="")
-                    .caption 
-                        h1 Chào mừng đến &nbsp;
-                            span Admin panel
-                        p Nhập thông tin đăng nhập
-                    .form-group 
-                        input.form-control(type="text" placeholder='User name')
-                    .form-group 
-                        input#core.form-control(type="password" placeholder='Password')
-                        img.show-pass(src="./images/icons/eye.svg", alt="")
-                    .form-group 
-                        input#remember(type="checkbox")
-                        label.label-remember(for="remember") Nhớ trạng thái đăng nhập
+                    .form-group.d-flex 
+                        label(for="") Tên Đăng Nhập
+                        input.form-control(type="text" placeholder="Nhập tên user")
+                    .form-group.d-flex 
+                        label(for="") Nhập Mật khẩu
+                        input.form-control(type="text" placeholder="Nhập mật khẩu")
+                        img.icon(src="./images/icons/eye.svg", alt="" )
                     button.btn.btn-submit 
-                        span Đăng nhập
-    .footer-section
-        .footer-content
-            .flower 
-                img(src="./images/flower.png", alt="")
+                        span Đăng Nhập
+                    a.forgot-password(href="") Bạn quên mật khẩu ?

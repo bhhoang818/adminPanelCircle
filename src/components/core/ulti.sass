@@ -46,6 +46,9 @@ section
     width: 100%
     & select
         display: none
+    select
+        option[disable]
+            color: red
     .select-selected
         width: 100%
         height: 36px
@@ -78,7 +81,7 @@ section
         top: 100%
         left: 0
         right: 0
-        z-index: 99
+        z-index: 100
 
         li
             padding: 10px 14px

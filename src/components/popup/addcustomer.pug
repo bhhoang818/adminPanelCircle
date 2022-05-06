@@ -1,0 +1,25 @@
+#popup-addcustomer.popup-add 
+    .popup-main
+        .popup-header 
+            h1 Thêm mới danh sách Khách hàng
+        .popup-body
+            form.wrap-form.row(action="")
+                .form-group.col-lg-6 
+                    label(for="") Tên Khách hàng
+                    input.form-control(type="text" placeholder='Nhập họ và tên')
+                .form-group.col-lg-6 
+                    label(for="") Mã khách hàng
+                    input.form-control(type="text" placeholder='Nhập mã khách hàng')
+                .form-group.col-lg-6 
+                    label(for="") Số lượt quay
+                    input.form-control(type="text" placeholder='Số lượt quay')
+                .form-group.col-lg-6 
+                    label(for="") Vô hiệu hóa
+                    .custom-select
+                        select.form-control(name='')
+                            option(value="0" disable hidden selected) True
+                            option(value="1") True
+                            option(value="2") False
+                .form-group.col-lg-12 
+                    button.btn.btn-submit.ms-auto 
+                        span Thêm mới

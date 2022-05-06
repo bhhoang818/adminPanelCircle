@@ -1,0 +1,41 @@
+#popup-addgift.popup-add 
+    .popup-main
+        .popup-header 
+            h1 Thêm mới Giải thưởng
+        .popup-body
+            form.wrap-form.row(action="")
+                .form-group.col-lg-12 
+                    label(for="") Tên giải thưởng
+                    input.form-control(type="text" placeholder='Nhập tên giải thưởng')
+                .form-group.col-lg-6 
+                    label(for="") Hình ảnh
+                    label.custom-file-label(for="") 
+                        span Url
+                        img(src="./images/icons/cloud-upload.svg", alt="")
+                    input.custom-file-input#customFile(type="file", name="") 
+                .form-group.col-lg-6 
+                    label(for="") Vị trí giải thưởng
+                    input.form-control(type="text" placeholder='Vị trí giải thưởng')
+                .form-group.col-lg-6 
+                    label(for="") Cho phép trúng
+                    .custom-select
+                        select.form-control(name='')
+                            option(value="0" disable hidden selected) True
+                            option(value="1") True
+                            option(value="2") False
+                .form-group.col-lg-6 
+                    label(for="") Tỉ lệ trúng (%)
+                    input.form-control(type="text" placeholder='Tỉ lệ trúng (%)')
+                .form-group.col-lg-6 
+                    label(for="") Số lượng
+                    input.form-control(type="text" placeholder='1')
+                .form-group.col-lg-6 
+                    label(for="") Ẩn giải
+                    .custom-select
+                        select.form-control(name='')
+                            option(value="0" disable hidden selected) True
+                            option(value="1") True
+                            option(value="2") False
+                .form-group.col-lg-12 
+                    button.btn.btn-submit.ms-auto 
+                        span Thêm mới

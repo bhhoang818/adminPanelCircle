@@ -12,7 +12,7 @@
             cursor: pointer
             width: 25%
             height: 4px
-            background: #ABABAB
+            background: #D3D8DE
             color: #ABABAB
             position: relative
             &_child
@@ -62,6 +62,18 @@
                         display: none
             &.active a > .created
                 display: block
+        &::after,
+        &::before
+            content: ''
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background: #D3D8DE
+        &::before
+            background: #FFC20E
+        &.active
+            &::after
+                background: #FFC20E
     @media screen and ( max-width: 600.98px )
         .wrapper-container
             margin-top: 20px

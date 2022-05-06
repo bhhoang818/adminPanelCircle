@@ -138,9 +138,11 @@ const initSwiper = () => {
         spaceBetween: 16,
         loop: true,
         loopFillGroupWithBlank: true,
+        observer: true,
+        observeParents: true,
         navigation: {
-            nextEl: ".layout-circle .swiper-header .swiper__arrows .swiper-button-next",
-            prevEl: ".layout-circle .swiper-header .swiper__arrows .swiper-button-prev",
+            nextEl: "#tab-1 .swiper__arrows .swiper-button-next",
+            prevEl: "#tab-1 .swiper__arrows .swiper-button-prev",
         },
         breakpoints: {
             640: {
@@ -158,10 +160,12 @@ const initSwiper = () => {
         slidesPerView: 5,
         spaceBetween: 16,
         loop: true,
+        observer: true,
+        observeParents: true,
         loopFillGroupWithBlank: true,
         navigation: {
-            nextEl: ".layout-bg .swiper-header .swiper__arrows .swiper-button-next",
-            prevEl: ".layout-bg .swiper-header .swiper__arrows .swiper-button-prev",
+            nextEl: "#tab-2 .swiper__arrows .swiper-button-next",
+            prevEl: "#tab-2 .swiper__arrows .swiper-button-prev",
         },
         breakpoints: {
             640: {

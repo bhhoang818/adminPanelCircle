@@ -52,106 +52,173 @@ section.step-section
 section.choice-customer
     .wrapper-container
         .wrap-sort.d-flex.align-items-center 
-            h1.title-small Nhóm Khách hàng
+            h1.title-small Nhóm giải thưởng
             .custom-select
                 select.form-control(name='')
-                    option(value="0" disable selected hidden) Chọn nhóm khách hàng 
-                    option(value="1") Nhóm KH 1
-                    option(value="2") Nhóm KH 2
-                    option(value="3") Nhóm KH 3
-                    option(value="4") Nhóm KH 4
-            a.edit.ms-3(href="") 
-                img(src="./images/icons/pencle.svg", alt="")
-            a.save.ms-3(href="") 
-                img(src="./images/icons/save.svg", alt="" style='display:none;')
-            //- #input-add
-            //-     input(type="text" placeholder='Nhập tên nhóm KH')
-            //-     a(href="")
-            //-         em.material-icons add 
-            //-         span Thêm
-        .wrap-body
+                    option(value="0" disable selected hidden) Giải 1 ngày 1/10
+                    option(value="1") Giải 1 ngày 1/10
+                    option(value="2") Giải 2 ngày 11/10
+                    option(value="3") Giải 3 ngày 12/10
+                    option(value="4") Giải 4 ngày 15/10
+            button.btn.btn-add.ms-3(type='submit' data-fancybox data-src='#popup-addgiftgroup')
+                img(src="./images/icons/add.svg", alt="")
+                span &nbsp;Thêm mới
+        .wrap-body.active
             .wrap-body_header.d-flex.align-items-center.justify-content-between 
                 h1.title-small Danh sách Khách hàng
                 .wrap-button.d-flex.align-items-center 
                     button.btn.btn-search 
                         img(src="./images/icons/search.svg", alt="")
-                    button.btn.btn-add
+                    button.btn.btn-add(data-fancybox data-src='#popup-addgift')
                         img(src="./images/icons/add.svg", alt="")
                         span &nbsp;Thêm mới
                     button.btn.btn-upload(type='submit') 
                         img(src="./images/icons/cloud-upload.svg", alt="")
                         span &nbsp;Tải lên
-                    button.btn.btn-setting(type='submit' data-fancybox='' data-src='#dialog-content') 
-                        img(src="./images/icons/setting.svg", alt="")
-                        span &nbsp;Cấu hình chung
-            .wrap-body_table 
-                table
+            .wrap-body_table  
+                table(style='display: table')
                     tr
                         th
                             .sort
-                                p Tên Khách hàng
+                                p Tên giải thưởng
                                 img(src="./images/icons/sort.svg", alt="")
                         th
-                            p Mã Khách hàng
+                            p Hình ảnh
                         th
-                            p Số lượt quay
+                            p Vị trí giải thưởng
                         th
-                            p Vô hiệu hóa
+                            p Cho phép trúng
+                        th
+                            p Tỉ lệ trúng (%)
+                        th
+                            p Số lượng giải
+                        th
+                            p Ẩn giải
+                        th
+                    -for(i=1; i<5; i++)
+                        tr
+                            td
+                                p Giải 1
+                            td
+                                img.icon(src="./images/bg-review.jpg", alt="")
+                                span url
+                            td
+                                p 2
+                            td
+                                p False
+                            td
+                                p 100
+                            td
+                                p 1
+                            td
+                                p False
+                            td
+                                button.btn.btn-edit(data-fancybox data-src='#popup-editgift')
+                                    img(src="./images/icons/edit2.svg", alt="alt")
+                table(style='display: none')
+                    tr
+                        th
+                            .sort
+                                p Tên giải thưởng
+                                img(src="./images/icons/sort.svg", alt="")
+                        th
+                            p Màu sắc
+                        th
+                            p Vị trí giải thưởng
+                        th
+                            p Cho phép trúng
+                        th
+                            p Tỉ lệ trúng (%)
+                        th
+                            p Số lượng giải
+                        th
+                            p Ẩn giải
+                        th
                     tr
                         td
-                            p Nguyễn Ngọc Yến Nhi
+                            p Giải 1
                         td
-                            p 123456
+                            span.color-box.color-box-blue
+                            span #80C2FF
                         td
                             p 2
                         td
-                            .custom-select
-                                select.form-control(name='')
-                                    option(value="0" disable hidden selected) True
-                                    option(value="1") True
-                                    option(value="2") False
+                            p False
+                        td
+                            p 100
+                        td
+                            p 1
+                        td
+                            p False
+                        td
+                            button.btn.btn-edit(data-fancybox data-src='')
+                                img(src="./images/icons/edit2.svg", alt="alt")
                     tr
                         td
-                            p Nguyễn Ngọc Yến Nhi
+                            p Giải 1
                         td
-                            p 123456
+                            span.color-box.color-box-green
+                            span #ABD653
                         td
                             p 2
                         td
-                            .custom-select
-                                select.form-control(name='')
-                                    option(value="0" disable hidden selected) True
-                                    option(value="1") True
-                                    option(value="2") False
+                            p False
+                        td
+                            p 100
+                        td
+                            p 1
+                        td
+                            p False
+                        td
+                            button.btn.btn-edit(data-fancybox data-src='')
+                                img(src="./images/icons/edit2.svg", alt="alt")
                     tr
                         td
-                            p Nguyễn Ngọc Yến Nhi
+                            p Giải 1
                         td
-                            p 123456
+                            span.color-box.color-box-red
+                            span #FCA5A6
                         td
                             p 2
                         td
-                            .custom-select
-                                select.form-control(name='')
-                                    option(value="0" disable hidden selected) True
-                                    option(value="1") True
-                                    option(value="2") False
+                            p False
+                        td
+                            p 100
+                        td
+                            p 1
+                        td
+                            p False
+                        td
+                            button.btn.btn-edit(data-fancybox data-src='')
+                                img(src="./images/icons/edit2.svg", alt="alt")
                     tr
                         td
-                            p Nguyễn Ngọc Yến Nhi
+                            p Giải 1
                         td
-                            p 123456
+                            span.color-box.color-box-yellow
+                            span #F1E384
                         td
                             p 2
                         td
-                            .custom-select
-                                select.form-control(name='')
-                                    option(value="0" disable hidden selected) True
-                                    option(value="1") True
-                                    option(value="2") False
+                            p False
+                        td
+                            p 100
+                        td
+                            p 1
+                        td
+                            p False
+                        td
+                            button.btn.btn-edit(data-fancybox data-src='')
+                                img(src="./images/icons/edit2.svg", alt="alt")
+                
+                .wrap-nonedb
+                    img.icon(src="./images/folder.png", alt="")
+                    a(href="") 
+                        h5 Tạo danh sách khách hàng
+                        p Hãy thêm mới khách hàng
                 nav.pagination-nav.d-flex.align-items-center
                     ul.pagination.d-flex.align-items-center.ms-auto  
-                        li.page-item
+                        li.page-item.ms-auto
                             a.page-link(href='#')
                                 em.material-icons navigate_before
                         li.page-item.active
@@ -170,5 +237,7 @@ section.choice-customer
                     button.btn.btn-submit(type='submit') 
                         span Tiếp tục tạo chiến lược
                         em.material-icons arrow_forward
-
+include ../popup/addgift.pug
+include ../popup/editgift.pug
+include ../popup/addgiftgroup.pug
 
