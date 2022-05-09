@@ -1,0 +1,67 @@
+section.history-section.section-main  
+    h1.section-title.d-flex.align-items-center 
+        img.icon(src="./images/icons/side-6.svg", alt="") 
+        |&nbsp; Giao diện vòng quay
+    .wrapper-container.d-flex 
+        .wrap-left 
+            .wrap-left_header.d-flex
+                h2 Giao diện hình nền và vòng quay
+            .wrap-left_body 
+                ul
+                    li.active
+                        .title-item 
+                            a.title(href="") Giao diện vòng quay
+                    li
+                        .title-item 
+                            a.title(href="") Giao diện hình nền
+        .wrap-right 
+            .wrap-right_header.d-flex.align-items-center.justify-content-between  
+                .wrap-right_header--title.d-flex.align-items-center
+                    img.icon(src="./images/icons/list.svg", alt="") 
+                    h2 &nbsp; Danh sách giao diện vòng quay
+                .wrap-right_header--sort.d-flex.align-items-center
+                    button.btn.btn-add.ms-auto 
+                        img(src="./images/icons/add.svg", alt="")
+                        span &nbsp;Thêm mới
+            .wrap-right_body 
+                table
+                    thead 
+                        th
+                            p Tên Giao diện
+                        th
+                            p Mô tả
+                        th 
+                            p Ngày tạo
+                        th 
+                            p Ngày sửa lần cuối
+                        th 
+                            p Action
+                    -for(i=1; i<5; i++)
+                        tr
+                            td
+                                p Giao diện default
+                            td
+                                p ABC vòng quay may mắn
+                            td
+                                p 2022-03-29T03:10:52.9335229
+                            td
+                                p 2022-03-29T03:10:52.9335229
+                            td 
+                                a(href="")  
+                                    img(src="./images/icons/edit.svg", alt="")
+                                a(href="") 
+                                    img(src="./images/icons/delete2.svg", alt="")
+            nav.pagination-nav
+                ul.pagination.d-flex.align-items-center 
+                    li.page-item.ms-auto
+                        a.page-link(href='#')
+                            em.material-icons navigate_before
+                    li.page-item.active
+                        a.page-link(href='#') 1
+                    li.page-item
+                        a.page-link(href='#') 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        a.page-link(href='#')
+                            em.material-icons navigate_next

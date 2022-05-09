@@ -84,11 +84,9 @@
                             transform: translate3d(0, 0, 0) scale(1)
                             animation: phone-icon 3000ms infinite
     &.is-open
-        left: 0
-        .open-sidebar
-            em
-                transform: rotate(-180deg)
+        right: 0
     @media screen and ( max-width: 768.98px )
         top: 51px
     @media screen and ( max-width: 600.98px )
-        left: -110px
+        right: -110px
+        left: auto

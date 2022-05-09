@@ -10,8 +10,6 @@ section.step-section
                     .icon.finished
                             img(src="./images/icons/f-1.svg", alt="")
                     .content
-                        p
-                            b Bước 1
                         p Tạo chiến lược 
             li.step.active
                 a.step_child(href="chon-nhom-khach-hang.html")
@@ -22,8 +20,6 @@ section.step-section
                     .icon.finished
                             img(src="./images/icons/f-2.svg", alt="")
                     .content
-                        p
-                            b Bước 2
                         p Chọn nhóm Khách hàng
             li.step.active 
                 a.step_child(href="thiet-lap-nhom-giai-thuong.html")
@@ -34,8 +30,6 @@ section.step-section
                     .icon.finished
                             img(src="./images/icons/f-3.svg", alt="")
                     .content
-                        p
-                            b Bước 3
                         p Chọn nhóm Giải thưởng
             li.step 
                 a.step_child(href="chon-giao-dien.html")
@@ -46,8 +40,6 @@ section.step-section
                     .icon.finished
                             img(src="./images/icons/f-4.svg", alt="")
                     .content
-                        p
-                            b Bước 4
                         p Chọn giao diện vòng quay
 section.choice-customer
     .wrapper-container
@@ -67,7 +59,13 @@ section.choice-customer
             .wrap-body_header.d-flex.align-items-center.justify-content-between 
                 h1.title-small Danh sách Khách hàng
                 .wrap-button.d-flex.align-items-center 
-                    button.btn.btn-search 
+                    form.wrap-form(action="") 
+                        .form-group 
+                            input.form-control(type="text" placeholder='Nhập từ khóa tìm kiếm ....')
+                            img.close(src="./images/icons/close.svg", alt="")
+                            button.icon-search
+                                img(src="./images/icons/search.svg", alt="" )
+                    button#btn-search.btn.btn-search 
                         img(src="./images/icons/search.svg", alt="")
                     button.btn.btn-add(data-fancybox data-src='#popup-addgift')
                         img(src="./images/icons/add.svg", alt="")
@@ -75,33 +73,72 @@ section.choice-customer
                     button.btn.btn-upload(type='submit') 
                         img(src="./images/icons/cloud-upload.svg", alt="")
                         span &nbsp;Tải lên
-            .wrap-body_table  
-                table(style='display: table')
-                    tr
-                        th
-                            .sort
-                                p Tên giải thưởng
-                                img(src="./images/icons/sort.svg", alt="")
-                        th
-                            p Hình ảnh
-                        th
-                            p Vị trí giải thưởng
-                        th
-                            p Cho phép trúng
-                        th
-                            p Tỉ lệ trúng (%)
-                        th
-                            p Số lượng giải
-                        th
-                            p Ẩn giải
-                        th
-                    -for(i=1; i<5; i++)
+            .wrap-body_table
+                .table-overflow  
+                    table(style='display: table')
+                        tr
+                            th
+                                .sort
+                                    p Tên giải thưởng
+                                    img(src="./images/icons/sort.svg", alt="")
+                            th
+                                p Hình ảnh
+                            th
+                                p Vị trí giải thưởng
+                            th
+                                p Cho phép trúng
+                            th
+                                p Tỉ lệ trúng (%)
+                            th
+                                p Số lượng giải
+                            th
+                                p Ẩn giải
+                            th
+                        -for(i=1; i<5; i++)
+                            tr
+                                td
+                                    p Giải 1
+                                td
+                                    img.icon(src="./images/bg-review.jpg", alt="")
+                                    span url
+                                td
+                                    p 2
+                                td
+                                    p False
+                                td
+                                    p 100
+                                td
+                                    p 1
+                                td
+                                    p False
+                                td
+                                    button.btn.btn-edit(data-fancybox data-src='#popup-editgift')
+                                        img(src="./images/icons/edit2.svg", alt="alt")
+                    table(style='display: none')
+                        tr
+                            th
+                                .sort
+                                    p Tên giải thưởng
+                                    img(src="./images/icons/sort.svg", alt="")
+                            th
+                                p Màu sắc
+                            th
+                                p Vị trí giải thưởng
+                            th
+                                p Cho phép trúng
+                            th
+                                p Tỉ lệ trúng (%)
+                            th
+                                p Số lượng giải
+                            th
+                                p Ẩn giải
+                            th
                         tr
                             td
                                 p Giải 1
                             td
-                                img.icon(src="./images/bg-review.jpg", alt="")
-                                span url
+                                span.color-box.color-box-blue
+                                span #80C2FF
                             td
                                 p 2
                             td
@@ -113,103 +150,65 @@ section.choice-customer
                             td
                                 p False
                             td
-                                button.btn.btn-edit(data-fancybox data-src='#popup-editgift')
+                                button.btn.btn-edit(data-fancybox data-src='')
                                     img(src="./images/icons/edit2.svg", alt="alt")
-                table(style='display: none')
-                    tr
-                        th
-                            .sort
-                                p Tên giải thưởng
-                                img(src="./images/icons/sort.svg", alt="")
-                        th
-                            p Màu sắc
-                        th
-                            p Vị trí giải thưởng
-                        th
-                            p Cho phép trúng
-                        th
-                            p Tỉ lệ trúng (%)
-                        th
-                            p Số lượng giải
-                        th
-                            p Ẩn giải
-                        th
-                    tr
-                        td
-                            p Giải 1
-                        td
-                            span.color-box.color-box-blue
-                            span #80C2FF
-                        td
-                            p 2
-                        td
-                            p False
-                        td
-                            p 100
-                        td
-                            p 1
-                        td
-                            p False
-                        td
-                            button.btn.btn-edit(data-fancybox data-src='')
-                                img(src="./images/icons/edit2.svg", alt="alt")
-                    tr
-                        td
-                            p Giải 1
-                        td
-                            span.color-box.color-box-green
-                            span #ABD653
-                        td
-                            p 2
-                        td
-                            p False
-                        td
-                            p 100
-                        td
-                            p 1
-                        td
-                            p False
-                        td
-                            button.btn.btn-edit(data-fancybox data-src='')
-                                img(src="./images/icons/edit2.svg", alt="alt")
-                    tr
-                        td
-                            p Giải 1
-                        td
-                            span.color-box.color-box-red
-                            span #FCA5A6
-                        td
-                            p 2
-                        td
-                            p False
-                        td
-                            p 100
-                        td
-                            p 1
-                        td
-                            p False
-                        td
-                            button.btn.btn-edit(data-fancybox data-src='')
-                                img(src="./images/icons/edit2.svg", alt="alt")
-                    tr
-                        td
-                            p Giải 1
-                        td
-                            span.color-box.color-box-yellow
-                            span #F1E384
-                        td
-                            p 2
-                        td
-                            p False
-                        td
-                            p 100
-                        td
-                            p 1
-                        td
-                            p False
-                        td
-                            button.btn.btn-edit(data-fancybox data-src='')
-                                img(src="./images/icons/edit2.svg", alt="alt")
+                        tr
+                            td
+                                p Giải 1
+                            td
+                                span.color-box.color-box-green
+                                span #ABD653
+                            td
+                                p 2
+                            td
+                                p False
+                            td
+                                p 100
+                            td
+                                p 1
+                            td
+                                p False
+                            td
+                                button.btn.btn-edit(data-fancybox data-src='')
+                                    img(src="./images/icons/edit2.svg", alt="alt")
+                        tr
+                            td
+                                p Giải 1
+                            td
+                                span.color-box.color-box-red
+                                span #FCA5A6
+                            td
+                                p 2
+                            td
+                                p False
+                            td
+                                p 100
+                            td
+                                p 1
+                            td
+                                p False
+                            td
+                                button.btn.btn-edit(data-fancybox data-src='')
+                                    img(src="./images/icons/edit2.svg", alt="alt")
+                        tr
+                            td
+                                p Giải 1
+                            td
+                                span.color-box.color-box-yellow
+                                span #F1E384
+                            td
+                                p 2
+                            td
+                                p False
+                            td
+                                p 100
+                            td
+                                p 1
+                            td
+                                p False
+                            td
+                                button.btn.btn-edit(data-fancybox data-src='')
+                                    img(src="./images/icons/edit2.svg", alt="alt")
                 
                 .wrap-nonedb
                     img.icon(src="./images/folder.png", alt="")

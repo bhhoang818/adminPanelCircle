@@ -1,0 +1,86 @@
+section.history-section.section-main  
+    h1.section-title.d-flex.align-items-center 
+        img.icon(src="./images/icons/side-4.svg", alt="") 
+        |&nbsp; Giao diện và giải thưởng
+    .wrapper-container.d-flex 
+        .wrap-left 
+            .wrap-left_header.d-flex
+                h2 Danh sách giải thưởng
+                button.btn.btn-add.ms-auto 
+                    img(src="./images/icons/add.svg", alt="")
+                    span &nbsp;Tạo mới
+            .wrap-left_body 
+                ul
+                    li.active
+                        .title-item 
+                            a.title(href="") Giải ngày 10/10
+                    li
+                        .title-item 
+                            a.title(href="") Giải ngày 10/10
+                    li
+                        .title-item 
+                            a.title(href="") Giải ngày 10/10
+        .wrap-right 
+            .wrap-right_header.d-flex.align-items-center.justify-content-between  
+                .wrap-right_header--title.d-flex.align-items-center
+                    img.icon(src="./images/icons/list.svg", alt="") 
+                    h2 &nbsp; Danh sách giải thưởng
+                .wrap-right_header--sort.d-flex.align-items-center
+                    button.btn.btn-add.ms-auto 
+                        img(src="./images/icons/add.svg", alt="")
+                        span &nbsp;Thêm mới
+                    button.btn.btn-upload.ms-3(type='submit') 
+                        img(src="./images/icons/cloud-upload.svg", alt="")
+                        span Tải lên
+            .wrap-right_body 
+                table
+                    thead 
+                        th
+                            p Tên Giải thưởng
+                        th
+                            p Hình ảnh
+                        th 
+                            p Màu sắc
+                        th 
+                            p Ngày tạo
+                        th 
+                            p Ngày sửa lần cuối
+                        th 
+                            p Người tạo
+                        th 
+                            p Action
+                    -for(i=1; i<7; i++)
+                        tr
+                            td
+                                p Giải 1
+                            td
+                                img.icon(src="./images/bg-review.jpg", alt="")
+                            td
+                                span.color-box.color-box-blue
+                                span &nbsp;#80C2FF
+                                
+                            td
+                                p 2022-03-29T03:10:52.9335229
+                            td
+                                p 2022-03-29T03:10:52.9335229
+                            td 
+                                p Nguyễn Hoàng Triều
+                            td 
+                                a(href="")  
+                                    img(src="./images/icons/edit.svg", alt="")
+                                a(href="") 
+                                    img(src="./images/icons/delete2.svg", alt="")
+            nav.pagination-nav
+                ul.pagination.d-flex.align-items-center 
+                    li.page-item.ms-auto
+                        a.page-link(href='#')
+                            em.material-icons navigate_before
+                    li.page-item.active
+                        a.page-link(href='#') 1
+                    li.page-item
+                        a.page-link(href='#') 2
+                    li.page-item
+                        a.page-link(href='#') 3
+                    li.page-item
+                        a.page-link(href='#')
+                            em.material-icons navigate_next

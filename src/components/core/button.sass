@@ -80,3 +80,54 @@
         background: #FFC20E
     &-setting
         background: #EAEEF2
+    &-hamburger-lines
+        margin-left: 0
+        cursor: pointer
+        position: relative
+        padding: 0
+        width: 30px
+        height: 20px
+        transition: .3s all linear
+        span
+            display: block
+            position: absolute
+            height: 3px
+            width: 100%
+            background: #58595B
+            border-radius: 9px
+            opacity: 1
+            left: 0
+            -webkit-transform: rotate(0deg)
+            -moz-transform: rotate(0deg)
+            -o-transform: rotate(0deg)
+            transform: rotate(0deg)
+            transition: .5s ease-in-out
+            &:nth-child(1)
+                top: 0
+            &:nth-child(2),
+            &:nth-child(3)
+                top: 10px
+            &:nth-child(4)
+                top: 20px
+        &.is-active
+            span
+                &:nth-child(1)
+                    top: 18px
+                    width: 0%
+                    left: 50%
+                &:nth-child(2)
+                    -webkit-transform: rotate(45deg)
+                    -moz-transform: rotate(45deg)
+                    -o-transform: rotate(45deg)
+                    transform: rotate(45deg)
+                &:nth-child(3)
+                    -webkit-transform: rotate(-45deg)
+                    -moz-transform: rotate(-45deg)
+                    -o-transform: rotate(-45deg)
+                    transform: rotate(-45deg)
+                &:nth-child(4)
+                    top: 18px
+                    width: 0%
+                    left: 50%
+        @media screen and ( min-width: 601px )
+            display: none

@@ -1,9 +1,9 @@
 window.onload = () => {
     loadingPage()
     showCore()
-    sideBarToggle()
     createSelect()
     initSwiper()
+    handleClick()
     var connectTabs = new pureJsTab()
 }
 const showCore = () => {
@@ -23,18 +23,7 @@ const loadingPage = () => {
     var preload = document.querySelector('#loading-container')
     preload.classList.add('preload-finish')
 }
-const sideBarToggle = () => {
-    var sideBarOpen = document.querySelector('#sidebar-nav .open-sidebar ')
-    var sideBar = document.querySelector('#sidebar-nav')
-    sideBarOpen.onclick = () => {
-        sideBar.classList.toggle('is-open')
-        document.querySelector('#overlay').classList.toggle('active')
-    }
-    document.querySelector('#overlay').onclick = () => {
-        sideBar.classList.remove('is-open')
-        document.querySelector('#overlay').classList.remove('active')
-    }
-}
+
 const pureJsTab = () => {
     var bindAll = function () {
         var menuElements = document.querySelectorAll('[data-tab]')
@@ -149,9 +138,15 @@ const initSwiper = () => {
                 slidesPerView: 2,
             },
             768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            1280: {
                 slidesPerView: 4,
             },
-            1281: {
+            1366: {
                 slidesPerView: 5,
             },
         },
@@ -172,12 +167,47 @@ const initSwiper = () => {
                 slidesPerView: 2,
             },
             768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            1280: {
                 slidesPerView: 4,
             },
-            1281: {
+            1366: {
                 slidesPerView: 5,
             },
         },
 
     });
+}
+const handleClick = () => {
+    let butonToggle = document.querySelector('.btn-hamburger-lines');
+    let sidebar = document.querySelector('#sidebar-nav');
+    let overlay = document.querySelector('#overlay');
+    let searchButton = document.querySelector('#btn-search');
+    let closeSearch = document.querySelector('.wrap-form .close');
+
+    butonToggle.onclick = () => {
+        console.log('test');
+        butonToggle.classList.toggle('is-active');
+        sidebar.classList.toggle('is-open');
+        overlay.classList.toggle('active');
+    }
+    overlay.onclick = () => {
+        butonToggle.classList.remove('is-active');
+        sidebar.classList.remove('is-open');
+        overlay.classList.remove('active');
+    }
+    if (searchButton) {
+        searchButton.onclick = () => {
+            document.querySelector('.wrap-form').classList.toggle('is-open');
+            searchButton.classList.toggle('active');
+        }
+        closeSearch.onclick = () => {
+            document.querySelector('.wrap-form').classList.remove('is-open');
+            searchButton.classList.remove('active');
+        }
+    }
 }

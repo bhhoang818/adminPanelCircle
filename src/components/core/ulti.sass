@@ -121,3 +121,32 @@ section
             &.active
                 .page-link
                     border: 1px solid $red-brand
+.color-box
+    width: 24px
+    height: 24px
+    border-radius: 2px
+    padding: 1px 12px
+    &-blue
+        background: #80C2FF
+    &-green
+        background: #ABD653
+    &-red
+        background: #FCA5A6
+    &-yellow
+        background: #F1E384
+.table-overflow
+    overflow-x: auto
+    table
+        tr
+            th
+                &:nth-child(1)
+                    position: -webkit-sticky
+                    position: sticky !important
+                    z-index: 2
+                    left: 0
+            td
+                &:nth-child(1)
+                    position: -webkit-sticky
+                    position: sticky
+                    z-index: 2
+                    left: 0

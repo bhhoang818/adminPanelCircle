@@ -18,16 +18,66 @@
                 padding-bottom: 16px
                 border-bottom: 1px solid #D3D8DE
                 .wrap-button
+                    position: relative
                     button
                         margin-left: 16px
+                    .btn-search
+                        position: relative
+                        z-index: 1
+                        transition: all ease-in-out .25s
+                        &.active
+                            opacity: 0
+                    .wrap-form
+                        position: absolute
+                        top: auto
+                        left: -236px
+                        opacity: 0
+                        visibility: hidden
+                        width: 0
+                        transition: all ease-in-out .3s
+                        z-index: 5
+                        .form-group
+                            position: relative
+                            .form-control
+                                width: 100%
+                                height: 32px
+                                background: #EAEEF2
+                                border-radius: 4px
+                                border: 0
+                                padding-left: 16px
+                                padding-right: 60px
+                            .icon-search
+                                position: absolute
+                                top: 0px
+                                right: 0
+                                width: 32px
+                                height: 32px
+                                cursor: pointer
+                                background: $trans
+                                border: 0
+                                padding: 0
+                                margin-left: 0
+                            .close
+                                width: 15px
+                                height: 32px
+                                position: absolute
+                                right: 36px
+                                top: 0
+                                cursor: pointer
+                        &.is-open
+                            width: 283px
+                            opacity: 1
+                            visibility: visible
             &_table
+
                 table
                     width: 100%
                     tr
                         display: none
                         th
                             position: relative
-                            padding: 16px 10px
+                            padding: 16px 24px
+                            background: #fff
                             .sort
                                 display: flex
                                 align-items: center
@@ -42,6 +92,7 @@
                                     margin-left: 10px
                             p
                                 position: relative
+                                white-space: nowrap
                                 &::after
                                     position: absolute
                                     left: -16px
@@ -60,31 +111,20 @@
                                 height: 1px
                                 content: ""
                         td
-                            padding: 17px 10px
+                            padding: 17px 24px
                             background: #F8F9FA
                             border-top: solid 8px #fff
                             .icon
                                 width: 42px
                                 border-radius: 4px
-                            .color-box
-                                width: 24px
-                                height: 24px
-                                border-radius: 2px
-                                padding: 1px 12px
-                                &-blue
-                                    background: #80C2FF
-                                &-green
-                                    background: #ABD653
-                                &-red
-                                    background: #FCA5A6
-                                &-yellow
-                                    background: #F1E384
+
                             p,
                             span
                                 color: #212B36
                                 width: 100%
                                 padding: 2px 16px
                                 box-sizing: border-box
+                                white-space: nowrap
                             .btn-edit
                                 box-sizing: border-box
                                 width: 40px
@@ -150,3 +190,65 @@
                         .btn-submit
                             opacity: 1
                             pointer-events: auto
+    @media screen and ( max-width: 992.98px )
+        .wrapper-container
+            .wrap-sort
+                padding: 16px
+                .title-small
+                    font-size: 18px
+                .custom-select
+                    width: 250px
+                    margin-left: auto
+            .wrap-body
+                padding: 16px
+                .title-small
+                    font-size: 18px
+                &_header
+                    flex-direction: column
+                    .title-small
+                        margin-bottom: 16px
+                    .wrap-button
+                        width: 100%
+                        flex-direction: row
+                        flex-wrap: wrap
+                        .btn-search
+                            display: none
+                        .wrap-form
+                            opacity: 1
+                            visibility: visible
+                            width: 100%
+                            position: static
+                            margin-bottom: 10px
+                            .close
+                                display: none
+                        button
+                            flex: 0 0 49%
+                            margin-left: 0
+                        .btn-upload
+                            margin-left: auto
+                        .btn-setting
+                            flex: 0 0 100%
+                            margin-top: 10px
+    @media screen and ( max-width: 600.98px )
+        .wrapper-container
+            .wrap-sort
+                flex-direction: column
+                justify-content: center
+                .title-small
+                    margin-bottom: 10px
+                .custom-select
+                    width: 100%
+                    margin-left: 0
+                    margin-bottom: 10px
+                .btn-add
+                    margin-left: 0
+            .wrap-body
+                &_table
+                    .wrap-button
+                        flex-wrap: wrap
+                        .btn-backstep,
+                        .btn-submit
+                            width: 100%
+                            margin-left: 0
+                        .btn-backstep
+                            margin-bottom: 16px

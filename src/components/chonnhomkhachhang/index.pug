@@ -10,8 +10,6 @@ section.step-section
                     .icon.finished
                             img(src="./images/icons/f-1.svg", alt="")
                     .content
-                        p
-                            b Bước 1
                         p Tạo chiến lược 
             li.step.active
                 a.step_child(href="chon-nhom-khach-hang.html")
@@ -22,10 +20,8 @@ section.step-section
                     .icon.finished
                             img(src="./images/icons/f-2.svg", alt="")
                     .content
-                        p
-                            b Bước 2
                         p Chọn nhóm Khách hàng
-            li.step.active 
+            li.step 
                 a.step_child(href="thiet-lap-nhom-giai-thuong.html")
                     .icon.created
                             img(src="./images/icons/c-3.svg", alt="") 
@@ -34,8 +30,6 @@ section.step-section
                     .icon.finished
                             img(src="./images/icons/f-3.svg", alt="")
                     .content
-                        p
-                            b Bước 3
                         p Chọn nhóm Giải thưởng
             li.step 
                 a.step_child(href="")
@@ -46,8 +40,6 @@ section.step-section
                     .icon.finished
                             img(src="./images/icons/f-4.svg", alt="")
                     .content
-                        p
-                            b Bước 4
                         p Chọn giao diện vòng quay
 section.choice-customer
     .wrapper-container
@@ -67,7 +59,13 @@ section.choice-customer
             .wrap-body_header.d-flex.align-items-center.justify-content-between 
                 h1.title-small Danh sách Khách hàng
                 .wrap-button.d-flex.align-items-center 
-                    button.btn.btn-search 
+                    form.wrap-form(action="") 
+                        .form-group 
+                            input.form-control(type="text" placeholder='Nhập từ khóa tìm kiếm ....')
+                            img.close(src="./images/icons/close.svg", alt="")
+                            button.icon-search
+                                img(src="./images/icons/search.svg", alt="" )
+                    button#btn-search.btn.btn-search 
                         img(src="./images/icons/search.svg", alt="")
                     button.btn.btn-add(data-fancybox data-src='#popup-addcustomer')
                         img(src="./images/icons/add.svg", alt="")
@@ -78,68 +76,70 @@ section.choice-customer
                     button.btn.btn-setting(type='submit' data-fancybox='' data-src='#dialog-content') 
                         img(src="./images/icons/setting.svg", alt="")
                         span &nbsp;Cấu hình chung
+                
             .wrap-body_table 
-                table
-                    tr
-                        th
-                            .sort
-                                p Tên Khách hàng
-                                img(src="./images/icons/sort.svg", alt="")
-                        th
-                            p Mã Khách hàng
-                        th
-                            p Số lượt quay
-                        th
-                            p Vô hiệu hóa
-                        th
-                    tr
-                        td
-                            p Nguyễn Ngọc Yến Nhi
-                        td
-                            p 123456
-                        td
-                            p 2
-                        td
-                            p False
-                        td
-                            button.btn.btn-edit(data-fancybox data-src='#popup-editcustomer')
-                                img(src="./images/icons/edit2.svg", alt="alt")
-                    tr
-                        td
-                            p Nguyễn Ngọc Yến Nhi
-                        td
-                            p 123456
-                        td
-                            p 2
-                        td
-                            p False
-                        td
-                            button.btn.btn-edit(data-fancybox data-src='#popup-editcustomer') 
-                                img(src="./images/icons/edit2.svg", alt="alt")
-                    tr
-                        td
-                            p Nguyễn Ngọc Yến Nhi
-                        td
-                            p 123456
-                        td
-                            p 2
-                        td
-                            p False
-                        td
-                            button.btn.btn-edit(data-fancybox data-src='#popup-editcustomer') 
-                                img(src="./images/icons/edit2.svg", alt="alt")
-                    tr
-                        td
-                            p Nguyễn Ngọc Yến Nhi
-                        td
-                            p 123456
-                        td
-                            p 2
-                        td
-                            p False
-                        td
-                            button.btn.btn-edit(data-fancybox data-src='#popup-editcustomer') 
-                                img(src="./images/icons/edit2.svg", alt="alt")
+                .table-overflow
+                    table
+                        tr
+                            th
+                                .sort
+                                    p Tên Khách hàng
+                                    img(src="./images/icons/sort.svg", alt="")
+                            th
+                                p Mã Khách hàng
+                            th
+                                p Số lượt quay
+                            th
+                                p Vô hiệu hóa
+                            th
+                        tr
+                            td
+                                p Nguyễn Ngọc Yến Nhi
+                            td
+                                p 123456
+                            td
+                                p 2
+                            td
+                                p False
+                            td
+                                button.btn.btn-edit(data-fancybox data-src='#popup-editcustomer')
+                                    img(src="./images/icons/edit2.svg", alt="alt")
+                        tr
+                            td
+                                p Nguyễn Ngọc Yến Nhi
+                            td
+                                p 123456
+                            td
+                                p 2
+                            td
+                                p False
+                            td
+                                button.btn.btn-edit(data-fancybox data-src='#popup-editcustomer') 
+                                    img(src="./images/icons/edit2.svg", alt="alt")
+                        tr
+                            td
+                                p Nguyễn Ngọc Yến Nhi
+                            td
+                                p 123456
+                            td
+                                p 2
+                            td
+                                p False
+                            td
+                                button.btn.btn-edit(data-fancybox data-src='#popup-editcustomer') 
+                                    img(src="./images/icons/edit2.svg", alt="alt")
+                        tr
+                            td
+                                p Nguyễn Ngọc Yến Nhi
+                            td
+                                p 123456
+                            td
+                                p 2
+                            td
+                                p False
+                            td
+                                button.btn.btn-edit(data-fancybox data-src='#popup-editcustomer') 
+                                    img(src="./images/icons/edit2.svg", alt="alt")
                 .wrap-nonedb
                     img.icon(src="./images/folder.png", alt="")
                     a(href="") 
